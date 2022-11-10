@@ -1,0 +1,15 @@
+//rootProject.name = 'springboot_react_example'
+pluginManagement {
+
+repositories {
+
+gradlePluginPortal()
+
+}
+
+}
+
+rootProject.name = 'springboot_react_example'
+
+include 'frontend'
+include 'backend'
