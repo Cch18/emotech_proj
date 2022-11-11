@@ -1,4 +1,6 @@
-ReactJS-Spring-Boot-Full-Stack-App
+#  ReactJS-Spring-Boot-Full-Stack-App
+
+![](./audio_rcd.gif)
 
 This project consists of two applications: one is a Spring Boot Rest API called backend and another is a ReactJS application called frontend.
 
@@ -6,7 +8,7 @@ Service-oriented platform focusing on establishing and maintaining connections b
 
 Click here to view the application. This application is subject to Copyright.
 
-Applications
+## Applications
 
 - backend
 
@@ -18,45 +20,80 @@ backend has the following endpoints
 
 - frontend
 
-ReactJS frontend application where users can record and save the recorded sounds . All the recorded sounds/voices will be automatically sent to backend where the uploaded file size is calculated. User can also see the size of the uploaded file 
-on UI.
+ReactJS frontend application where users can record and save the recorded sounds . All the recorded sounds/voices will be automatically sent to backend where the uploaded file size is calculated. User can also see the size of the uploaded file on UI.
 
+## Prerequisites
 
-Prerequisites
+- Java 11+
 
--Java 11+
+- NodeJs v.16.13.1 /npm v.8.3.0
+- Docker -v 20.10.21
 
--npm
-
-
-Set up
+## Installation
 
 Clone the repository:
 
-> git clone https://github.com/Cch18/emotech_proj.git
+```bash
+git clone https://github.com/Cch18/emotech_proj.git
+```
 
 Navigate to the newly created folder:
 
-> cd emotech_proj/
+```bash
+cd emotech_proj/
+```
 
-Frontend -
+Start the application 
 
-Install NodeJs.v.16.13.1 /npm v.8.3.0
-
-Navigate to frontend subfolder:
-
- > cd frontend
-
-Install the modules
-
- > npm i
-
-Start the application on local host:
-
-> npm start
+```bash
+docker-compose -f docker-compose.yml up
+```
 
 Navigate to:
 
-http://localhost:8000
+[http://localhost:8000](http://localhost:8000/)
 
+
+
+##  Development server
+
+**Frontend** -NodeJs.v.16.13.1 /npm v.8.3.0
+
+Navigate to frontend subfolder:
+
+```bash
+cd frontend
+```
+
+Install the modules
+
+```bash
+npm i
+```
+
+Start the application on local host:
+
+```bash
+npm start
+```
+
+Navigate to:
+
+[http://localhost:3000](http://localhost:3000/)
+
+**Backend -** Install JDK 11.0.11 Install docker -v 20.10.21 Install docker-compose - v2.12.2
+
+Navigate to frontend subfolder:
+
+```bash
+cd backend
+```
+
+Start the application on local host:
+
+```bash
+gradle bootrun
+```
+
+The backend will run on http://localhost:8080 
 

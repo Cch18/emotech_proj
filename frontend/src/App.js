@@ -58,14 +58,18 @@ class App extends React.Component {
         var formData = new FormData();
         formData.append("file", file);
 
+        var backend_url = process.env.REACT_APP_BACKEND_URL;
+        
         var xhr = new XMLHttpRequest();
         // call XMLHttpRequest open() method to configure its request.
-        xhr.open("POST", "/upload"); 
+        xhr.open("POST", backend_url + "/upload"); 
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+        xhr.setRequestHeader('Access-Control-Allow-Methods', 'GET,POST,PUT');
         //send data ...
         xhr.send(formData);
         xhr.onload = function() {
           var data = JSON.parse(xhr.responseText);
-
           if(xhr.status === 200) {
             // use DOM method to control CSS and HTML
             FileUploadFailed.style.display = "none";

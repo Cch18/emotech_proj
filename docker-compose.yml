@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: frontend-react
+    image: chuanchuanhu/emotech-test-frontend-react-app:v1.0.0
+    build:
+      context: .
+    ports:
+      - "8000:80"
+    depends_on:
+      - "backend"
+  backend:
+    container_name: backend-springboot-tomcat
+    image: chuanchuanhu/emotech-test-backend-java-app:v1.0.0
+    ports:
+      - "9000:8080"
