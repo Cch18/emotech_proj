@@ -29,13 +29,13 @@ ReactJS frontend application where users can record and save the recorded sounds
 Clone the repository:
 
 ```bash
-git clone https://github.com/Cch18/emotech_proj.git
+git clone https://github.com/Cch18/react_proj.git
 ```
 
 Navigate to the newly created folder:
 
 ```bash
-cd emotech_proj/
+cd react_proj/
 ```
 
 Start the application 
